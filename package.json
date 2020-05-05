@@ -14,9 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "colyseus.js": "^0.12.2",
-    "phaser": "^3.20.1",
-    "socket.io": "^2.3.0"
+    "phaser": "^3.20.1"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
