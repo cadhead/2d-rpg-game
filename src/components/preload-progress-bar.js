@@ -1,11 +1,10 @@
 export default class {
   constructor(scene, size = {}) {
     this.scene = scene
-
-    Object.defineProperty(this, {
-      width: 400,
-      height: 40
-    }, size)
+    this.size = {
+      width: size.width || 400,
+      height: size.height || 40
+    }
 
     this.bar = this.scene.add.graphics()
     this.box = this.scene.add.graphics()

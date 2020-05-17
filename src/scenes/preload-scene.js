@@ -1,6 +1,8 @@
 import { Scene } from "phaser"
+import { SpritesLoader } from "../lib/ResourceLoader"
+
 import ProgressBar from "../components/preload-progress-bar";
-import Assets from "../assets/*/*.png"
+import { Sprites } from "../assets"
 
 export default class extends Scene {
   constructor() {
@@ -20,19 +22,19 @@ export default class extends Scene {
       bar.destroy()
     })
 
-    console.log(Assets)
+    SpritesLoader(this, Sprites)
 
-    this.load.image("spriteSheet", Assets.Spritesheet.roguelikeSheet_transparent)
-
-    for (let i = 0; i < 500; i++) {
-      this.load.image("spriteSheet" + i, "../assets/Spritesheet/roguelikeSheet_transparent.png");
-    }
+    /* test */
+    // for (let i = 0; i < 100; i++) {
+    //   this.load.image("image" + i, "some.png")
+    // }
   }
 
   create() {
-    this.add.image(400, 400, "spriteSheet")
+    this.scene.start("Main")
   }
 
   update() {
+    
   }
 }

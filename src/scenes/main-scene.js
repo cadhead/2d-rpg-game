@@ -12,7 +12,7 @@ export default class extends Scene {
   }
 
   create() {
-
+    this.add.image(400, 400, "overworld")
   }
 
   update() {

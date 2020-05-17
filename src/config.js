@@ -12,7 +12,8 @@ export default {
   roundPixels: true,
   backgroundColor: "#000000",
   scale: {
-    mode: Scale.ScaleModes.ENVELOP
+    mode: Scale.ScaleModes.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH
   },
   banner: false,
   disableContextMenu: true,
@@ -23,5 +24,5 @@ export default {
       debug: true
     }
   },
-  scene: [BootScene, MainScene, PreloadScene]
+  scene: [BootScene, PreloadScene, MainScene]
 };
