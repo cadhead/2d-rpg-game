@@ -5,10 +5,9 @@ import PreloadScene from "./scenes/preload-scene";
 
 export default {
   type: WEBGL,
-  parent: "rpg",
   width: window.innerWidth,
   height: window.innerHeight,
-  pixelArt: true,
+  render: { pixelArt: true, antialias: false, autoResize: false },
   roundPixels: true,
   backgroundColor: "#000000",
   scale: {

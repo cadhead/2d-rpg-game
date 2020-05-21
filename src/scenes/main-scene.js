@@ -1,4 +1,5 @@
 import { Scene } from "phaser"
+import GenerateMap from "../lib/GenerateMap"
 
 export default class extends Scene {
   constructor() {
@@ -8,11 +9,11 @@ export default class extends Scene {
   }
 
   preload() {
-
+    GenerateMap(this, "overworld")
   }
 
   create() {
-    this.add.image(400, 400, "overworld")
+
   }
 
   update() {

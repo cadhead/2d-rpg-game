@@ -1,4 +1,6 @@
-import { Scene } from "phaser"
+import { Scene, Scale } from "phaser"
+import { Logo } from "../../assets"
+import Splash from "../lib/Splash"
 
 export default class extends Scene {
   constructor() {
@@ -8,14 +10,18 @@ export default class extends Scene {
   }
 
   preload() {
-
+    for (let logo of Logo) {
+      this.load.image(logo.name, logo.image)
+    }
   }
 
   create() {
-    this.scene.start("Preload")
+    this.splash = new Splash(Logo)
   }
 
   update() {
-
+    this.splash.apply(this, () => {
+      this.scene.start("Preload")
+    })
   }
 }

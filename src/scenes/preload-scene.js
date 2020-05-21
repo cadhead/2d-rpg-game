@@ -1,8 +1,8 @@
 import { Scene } from "phaser"
-import { SpritesLoader } from "../lib/ResourceLoader"
+import { LoadSprites, LoadMaps } from "../lib/ResourceLoader"
 
 import ProgressBar from "../components/preload-progress-bar";
-import { Sprites } from "../assets"
+import { Sprites, Maps } from "../../assets"
 
 export default class extends Scene {
   constructor() {
@@ -22,12 +22,8 @@ export default class extends Scene {
       bar.destroy()
     })
 
-    SpritesLoader(this, Sprites)
-
-    /* test */
-    // for (let i = 0; i < 100; i++) {
-    //   this.load.image("image" + i, "some.png")
-    // }
+    LoadSprites(this, Sprites)
+    LoadMaps(this, Maps)
   }
 
   create() {
